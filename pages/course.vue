@@ -9,6 +9,12 @@
           <span class="font-bold">Mastering Nuxt 3</span>
         </span>
       </h1>
+      <!-- <NuxtLink
+      to="/"
+      class="inline-block mb-6 bg-sky-600 hover:bg-sky-700 text-white font-semibold py-1 px-2 rounded-md shadow transition "
+      >
+      ← Back to Home
+      </NuxtLink> -->
     </div>
 
     <div class="flex flex-row justify-center flex-grow">

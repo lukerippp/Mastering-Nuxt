@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="mt-0 uppercase font-bold text-slate-400 mb-1">
+    <p class="mt-0 uppercase font-bold text-slate-400 mb-1 lex flex-col items-center px-4 w-full max-w-4xl">
       Lesson {{ chapter.number }} - {{ lesson.number }}
     </p>
     <h2 class="my-0">{{ lesson.title }}</h2>
@@ -20,15 +20,23 @@
         Download Video
       </NuxtLink>
     </div>
-    <VideoPlayer
-      v-if="lesson.videoId"
-      :videoId="lesson.videoId"
-    />
+      <VideoPlayer
+        v-if="lesson.videoId"
+        :videoId="lesson.videoId"
+      />
     <p>{{ lesson.text }}</p>
-    <LessonCompleteButton
-      :model-value="isLessonComplete"
-      @update:model-value="toggleComplete"
-    />
+    <div class="flex items-center justify-between w-full mb-6">
+      <LessonCompleteButton
+        :model-value="isLessonComplete"
+        @update:model-value="toggleComplete"
+      />
+      <NuxtLink
+        to="/"
+        class="rounded text-white font-bold py-2 px-4 cursor-pointer transition-transform duration-300 transform hover:scale-105 bg-gray-500"
+      >
+      ← Back to Home
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
