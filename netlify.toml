@@ -2,3 +2,4 @@
   command = "pnpm run build"
   functions = "netlify/functions"
   publish = "dist"
+  NODE_VERSION = "18.17.0"
